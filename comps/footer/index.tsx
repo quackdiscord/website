@@ -55,7 +55,11 @@ export default function Footer() {
                     <a className="link link-hover link-primary text-white" href="/premium">
                         Premium
                     </a>
-                    <a className="link link-hover link-primary text-white" href="/status">
+                    <a
+                        className="link link-hover link-primary text-white"
+                        href="https://status.seedsbot.xyz/"
+                        target="_blank"
+                    >
                         Status
                     </a>
                     <a className="link link-hover link-primary text-white" href="/blog">
