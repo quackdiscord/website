@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer className="footer p-10 bg-base-100 text-base-content border-t-[1px] border-neutral">
                 <aside>
-                    <Image src="/images/webp/logo.webp" width={50} height={50} alt="Seeds Logo" />
+                    <Image src="/images/webp/logo-circle.webp" width={50} height={50} alt="Seeds Logo" />
                     <div className="w-3/4">
                         <p>Making Discord safer, one server at a time.</p>
 
