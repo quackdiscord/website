@@ -4,7 +4,7 @@ export default function SEOHead(props: any) {
     return (
         <Head>
             <title>{props.title || "Quack Discord Bot"}</title>
-            <link rel="icon" href="/images/webp/logo.webp" />
+            <link rel="icon" href="/images/favicon.ico" />
             <meta
                 name="description"
                 content={
