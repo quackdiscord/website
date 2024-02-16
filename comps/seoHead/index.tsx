@@ -40,7 +40,7 @@ export default function SEOHead(props: any) {
             {/* Site keywords */}
             <meta
                 name="keywords"
-                content="Quack, Quackbot, discord, bot, discord bot, moderation, server, levels, economy, website, dickey, Quack, music, levels, discordbot, dashboard, web, add to server, invite, support, help, discord support, bots for discord"
+                content="Quack, seeds, Quackbot, seedsbot, discord, bot, discord bot, moderation, server, levels, economy, website, dickey, Quack, seedbot, seed bot, seeds bot, music, levels, discordbot, dashboard, web, add to server, invite, support, help, discord support, bots for discord"
             />
             <meta name="robots" content="index, follow" />
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
