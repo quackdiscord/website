@@ -6,7 +6,7 @@ export default function SmallFooter(props: any) {
         <>
             <footer className="footer py-6 text-base-content sm:justify-between justify-center">
                 <aside className="items-center grid-flow-col justify-center">
-                    <Image src="/images/webp/logo.webp" width={30} height={30} alt="Seeds Logo" />
+                    <Image src="/images/webp/logo-circle.webp" width={30} height={30} alt="Seeds Logo" />
                     <div className="flex flex-col ml-2 justify-center">
                         <p className="opacity-40">© 2023 Object LLC.</p>
                     </div>
