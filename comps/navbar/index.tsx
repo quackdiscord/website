@@ -50,7 +50,7 @@ export default function Navbar(props: any) {
                 </a>
 
                 <a className="btn sm:hidden flex btn-ghost normal-case text-xl font-bold" href="/">
-                    <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} />
+                    <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
                 </a>
 
                 <ul className="menu menu-horizontal hidden lg:flex flex-row px-1 text-zinc-300">
