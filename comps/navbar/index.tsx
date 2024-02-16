@@ -45,8 +45,8 @@ export default function Navbar(props: any) {
                     </ul>
                 </div>
                 <a className="btn sm:flex hidden btn-ghost normal-case text-xl font-bold" href="/">
-                    <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} />
-                    Seeds
+                    <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
+                    Quack
                 </a>
 
                 <a className="btn sm:hidden flex btn-ghost normal-case text-xl font-bold" href="/">

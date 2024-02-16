@@ -16,7 +16,7 @@ export default function Home() {
             className={`flex min-h-screen flex-col text-white items-center justify-between sm:px-10 px-2 ${inter.className}`}
             data-theme="primary"
         >
-            <SEOHead title="Seeds Discord Bot" />
+            <SEOHead />
             <Navbar />
             <HomeHero />
             <br />

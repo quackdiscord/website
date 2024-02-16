@@ -25,7 +25,7 @@ export default function HomeHero() {
                     </div>
 
                     <p className="py-6 text-zinc-400">
-                        Seeds is an all-in-one Discord bot for keeping your servers safe, secure, fun, and welcoming for
+                        Quack is an all-in-one Discord bot for keeping your servers safe, secure, fun, and welcoming for
                         every member. Easily moderate and enforce rules without feeling like your learning rocket
                         science.
                     </p>
@@ -55,7 +55,6 @@ export default function HomeHero() {
                 </div>
 
                 <div className="sm:flex hidden col-span-1 flex-col justify-center items-center ml-6 h-full">
-                    {/* <Image src={`/images/webp/logo.webp`} alt="Seeds Logo" width={300} height={300} /> */}
                     <DiscordElement />
                 </div>
             </div>

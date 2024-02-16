@@ -48,7 +48,7 @@ export default function Footer() {
                     </div>
                 </aside>
                 <nav>
-                    <header className="footer-title">Seeds</header>
+                    <header className="footer-title">Quack</header>
                     <a className="link link-hover link-primary text-white" href="/commands">
                         Commands
                     </a>
