@@ -21,7 +21,7 @@ export default function Home() {
             <div className="flex flex-col items-start justify-center mt-28 w-full lg:px-10 px-2 mb-10">
                 <h1 className="sm:text-6xl text-4xl font-bold">Commands</h1>
                 <p className="sm:text-xl text-md font-normal text-zinc-400 mt-2">
-                    Here you can find a comprehensive list of all of Quack's commands, as well as how to use them!
+                    Here you can find a comprehensive list of all of Quack&apos;s commands, as well as how to use them!
                 </p>
 
                 <div className="flex flex-col sm:text-md text-sm font-normal mb-8">
