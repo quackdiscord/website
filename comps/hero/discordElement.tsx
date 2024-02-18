@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { FaHashtag, FaPlusCircle } from "react-icons/fa";
 
 export default function DiscordElement() {

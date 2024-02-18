@@ -1,19 +1,10 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { FaDiscord, FaPlus, FaPlusCircle, FaQuestionCircle } from "react-icons/fa";
+import { FaDiscord, FaQuestionCircle } from "react-icons/fa";
 import DiscordElement from "./discordElement";
+import Link from "next/link";
 
 export default function HomeHero() {
-    const imageOptions = ["purge", "ban", "lockdown", "cases", "logs"];
-    const [image, setImage] = useState(imageOptions[0]);
-
-    useEffect(() => {
-        const random = Math.floor(Math.random() * imageOptions.length);
-        setImage(imageOptions[random]);
-    }, []);
-
     return (
-        <div className="hero min-h-screen overflow-x-hidden xl:-mb-10 lg:mt-0 sm:mb-10 sm:mt-0 mt-20">
+        <div className="hero flex-1 mt-20 md:mt-0">
             <div className="hero-content grid gap-8 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-2">
                 <div className="lg:col-span-1">
                     <div className="leading-10">
@@ -45,12 +36,12 @@ export default function HomeHero() {
                     </div>
 
                     <div className="flex sm:flex-row flex-col gap-4 w-full mt-8">
-                        <a className="btn sm:w-[40%] w-full btn-lg btn-primary normal-case" href="/invite">
+                        <Link className="btn sm:w-[40%] w-full btn-lg btn-primary normal-case" href="/invite">
                             <FaDiscord className="text-md" /> Add to Discord
-                        </a>
-                        <a className="btn sm:w-[40%] w-full btn-lg btn-neutral normal-case" href="/discord">
+                        </Link>
+                        <Link className="btn sm:w-[40%] w-full btn-lg btn-neutral normal-case" href="/discord">
                             <FaQuestionCircle className="text-md" /> Need help?
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

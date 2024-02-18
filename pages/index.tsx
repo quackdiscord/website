@@ -1,12 +1,7 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/comps/navbar";
 import SEOHead from "@/comps/seoHead";
 import HomeHero from "@/comps/hero/home";
-import { useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { User } from "next-auth";
-import SmallFooter from "@/comps/footer/small";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +14,6 @@ export default function Home() {
             <SEOHead />
             <Navbar />
             <HomeHero />
-            <br />
-            <SmallFooter />
         </main>
     );
 }

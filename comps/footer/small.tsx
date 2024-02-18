@@ -8,7 +8,17 @@ export default function SmallFooter(props: any) {
                 <aside className="items-center grid-flow-col justify-center">
                     <Image src="/images/webp/logo-circle.webp" width={30} height={30} alt="Seeds Logo" />
                     <div className="flex flex-col ml-2 justify-center">
-                        <p className="opacity-40">© 2023 Object LLC.</p>
+                        <p className="opacity-40">
+                            © 2023{" "}
+                            <a
+                                href="https://dickey.gg"
+                                target="_blank"
+                                className="link link-hover link-primary text-inherit"
+                            >
+                                Object
+                            </a>{" "}
+                            LLC.
+                        </p>
                     </div>
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end justify-self-center">

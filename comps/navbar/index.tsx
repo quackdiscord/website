@@ -2,6 +2,7 @@ import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import { FaBars, FaCode, FaCrown, FaDiscord, FaPlus, FaPlusCircle } from "react-icons/fa";
 import UserMenu from "./userMenu";
+import Link from "next/link";
 
 export default function Navbar(props: any) {
     const { data: session } = useSession();
@@ -18,7 +19,7 @@ export default function Navbar(props: any) {
                         className="menu menu-md w-64 dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box"
                     >
                         <li>
-                            <a href="/commands">Commands</a>
+                            <Link href="/commands">Commands</Link>
                         </li>
                         <li>
                             <a>Resources</a>
@@ -29,7 +30,7 @@ export default function Navbar(props: any) {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/support">Support Server</a>
+                                    <Link href="/support">Support Server</Link>
                                 </li>
                                 <li>
                                     <a href="/blog">Blog</a>
@@ -37,49 +38,49 @@ export default function Navbar(props: any) {
                             </ul>
                         </li>
                         <li className="text-primary font-bold">
-                            <a href="/invite">
+                            <Link href="/invite">
                                 <FaPlusCircle className="text-md" />
                                 Add to Discord
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
-                <a className="btn sm:flex hidden btn-ghost normal-case text-xl font-bold" href="/">
+                <Link className="btn sm:flex hidden btn-ghost normal-case text-xl font-bold" href="/">
                     <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
                     Quack
-                </a>
+                </Link>
 
-                <a className="btn sm:hidden flex btn-ghost normal-case text-xl font-bold" href="/">
+                <Link className="btn sm:hidden flex btn-ghost normal-case text-xl font-bold" href="/">
                     <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
-                </a>
+                </Link>
 
                 <ul className="menu menu-horizontal hidden lg:flex flex-row px-1 text-zinc-300">
                     <li>
-                        <a href="/commands">Commands</a>
+                        <Link href="/commands">Commands</Link>
                     </li>
                     <li tabIndex={0}>
                         <details>
                             <summary>Resources</summary>
                             <ul className="p-2  bg-base-200">
                                 <li>
-                                    <a href="https://docs.seedsbot.xyz" target="_blank">
+                                    <a href="https://docs.quackbot.xyz" target="_blank">
                                         Documentation
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/support">Support Server</a>
+                                    <Link href="/support">Support Server</Link>
                                 </li>
                                 <li>
-                                    <a href="/blog">Blog</a>
+                                    <Link href="/blog">Blog</Link>
                                 </li>
                             </ul>
                         </details>
                     </li>
                     <li className="text-primary font-bold">
-                        <a className="normal-case" href="/invite">
+                        <Link className="normal-case" href="/invite">
                             <FaPlusCircle className="text-md" />
                             Add to Discord
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

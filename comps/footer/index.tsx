@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
@@ -49,9 +50,9 @@ export default function Footer() {
                 </aside>
                 <nav>
                     <header className="footer-title">Quack</header>
-                    <a className="link link-hover link-primary text-white" href="/commands">
+                    <Link className="link link-hover link-primary text-white" href="/commands">
                         Commands
-                    </a>
+                    </Link>
                     <a className="link link-hover link-primary text-white" href="/premium">
                         Premium
                     </a>
@@ -71,15 +72,15 @@ export default function Footer() {
                     <a className="link link-hover link-primary text-white" href="/docs">
                         Documentation
                     </a>
-                    <a className="link link-hover link-primary text-white" href="/commands">
+                    <Link className="link link-hover link-primary text-white" href="/commands">
                         Commands
-                    </a>
-                    <a className="link link-hover link-primary text-white" href="/discord">
+                    </Link>
+                    <Link className="link link-hover link-primary text-white" href="/discord">
                         Support Server
-                    </a>
-                    <a className="link link-hover link-primary text-white" href="/discord">
+                    </Link>
+                    <Link className="link link-hover link-primary text-white" href="/discord">
                         Contact Us
-                    </a>
+                    </Link>
                 </nav>
                 <nav>
                     <header className="footer-title">Legal</header>
