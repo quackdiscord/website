@@ -69,7 +69,7 @@ export default function Footer() {
                 </nav>
                 <nav>
                     <header className="footer-title">Support</header>
-                    <a className="link link-hover link-primary text-white" href="/docs">
+                    <a className="link link-hover link-primary text-white" href="https://docs.quackbot.xyz">
                         Documentation
                     </a>
                     <Link className="link link-hover link-primary text-white" href="/commands">
