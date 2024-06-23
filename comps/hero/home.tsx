@@ -31,7 +31,7 @@ export default function HomeHero() {
                         </div>
 
                         <div className="rounded-full bg-red-400/20 text-red-300 w-fit h-fit p-2 px-3">
-                            <p>🚨 Protect your server</p>
+                            <p>🚨 Private Tickets</p>
                         </div>
                     </div>
 

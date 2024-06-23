@@ -39,12 +39,44 @@ export default function Commands() {
                 permission: "KICK_MEMBERS"
             },
             {
+                name: "timeout add",
+                parameters: {
+                    required: ["user", "duration"],
+                    optional: ["reason"]
+                },
+                short_description: "Adds a timeout to a user",
+                long_description:
+                    'Adds a timeout to a user. If no reason is provided, it will default to "No reason provided". This will create a case so other mods can view the timeout reason.',
+                permission: "MODERATE_MEMBERS"
+            },
+            {
+                name: "timeout remove",
+                parameters: {
+                    required: ["user"],
+                    optional: []
+                },
+                short_description: "Removes a timeout from a user",
+                long_description: "Removes a timeout from a user.",
+                permission: "MODERATE_MEMBERS"
+            },
+            {
                 name: "cases add",
                 parameters: {
                     required: ["user", "reason"],
                     optional: []
                 },
                 short_description: "Adds a case to a user",
+                long_description:
+                    "This command essentially acts as a warn system. It will DM the user for the reason of their warn, and it will create a case with type warn, that any other mod can see later on.",
+                permission: "MODERATE_MEMBERS"
+            },
+            {
+                name: "warn",
+                parameters: {
+                    required: ["user", "reason"],
+                    optional: []
+                },
+                short_description: "Alias for /cases add",
                 long_description:
                     "This command essentially acts as a warn system. It will DM the user for the reason of their warn, and it will create a case with type warn, that any other mod can see later on.",
                 permission: "MODERATE_MEMBERS"
@@ -192,37 +224,70 @@ export default function Commands() {
                     "This command will remove the latest note that was added to the server. This is useful for quickly removing the latest note if it was added by mistake.",
                 permission: "MODERATE_MEMBERS"
             },
+            // {
+            //     name: "lockdown channel",
+            //     parameters: {
+            //         required: [],
+            //         optional: ["channel"]
+            //     },
+            //     short_description: "Locks down a channel",
+            //     long_description:
+            //         "This command will lock down a channel. If no channel is provided, it will lock down the channel the command was used in.",
+            //     permission: "MODERATE_MEMBERS"
+            // },
+            // {
+            //     name: "lockdown server",
+            //     parameters: {
+            //         required: [],
+            //         optional: []
+            //     },
+            //     short_description: "Locks down the server",
+            //     long_description:
+            //         "This command will lock down the server. This will lock down all channels in the server, and prevent users from sending messages.",
+            //     permission: "MODERATE_MEMBERS"
+            // },
+            // {
+            //     name: "unlock",
+            //     parameters: {
+            //         required: [],
+            //         optional: ["channel"]
+            //     },
+            //     short_description: "Unlocks a channel",
+            //     long_description:
+            //         "This command will unlock a channel. If no channel is provided, it will unlock the channel the command was used in.",
+            //     permission: "MODERATE_MEMBERS"
+            // },
             {
-                name: "lockdown channel",
+                name: "ticket channel",
                 parameters: {
-                    required: [],
-                    optional: ["channel"]
+                    required: ["channel"],
+                    optional: []
                 },
-                short_description: "Locks down a channel",
+                short_description: "Sets the channel to use for tickets",
                 long_description:
-                    "This command will lock down a channel. If no channel is provided, it will lock down the channel the command was used in.",
+                    "This command will set the channel to use for tickets. It will send a message to the channel with a button to create tickets. Please ensure that the bot can send messages to the channel and members can send messages to threads.",
                 permission: "MODERATE_MEMBERS"
             },
             {
-                name: "lockdown server",
+                name: "ticket log channel",
+                parameters: {
+                    required: ["channel"],
+                    optional: []
+                },
+                short_description: "Sets the channel to use for ticket logs",
+                long_description:
+                    "This command will set the channel to use for ticket logs. As the name suggests, ticket activity will be logged here. Please ensure that the bot can send messages to the channel.",
+                permission: "MODERATE_MEMBERS"
+            },
+            {
+                name: "ticket queue",
                 parameters: {
                     required: [],
                     optional: []
                 },
-                short_description: "Locks down the server",
+                short_description: "Shows the ticket queue",
                 long_description:
-                    "This command will lock down the server. This will lock down all channels in the server, and prevent users from sending messages.",
-                permission: "MODERATE_MEMBERS"
-            },
-            {
-                name: "unlock",
-                parameters: {
-                    required: [],
-                    optional: ["channel"]
-                },
-                short_description: "Unlocks a channel",
-                long_description:
-                    "This command will unlock a channel. If no channel is provided, it will unlock the channel the command was used in.",
+                    "This command will show the queue of open tickets for your server in order of when they were created.",
                 permission: "MODERATE_MEMBERS"
             },
             {
@@ -314,9 +379,9 @@ export default function Commands() {
                 permission: "MODERATE_MEMBERS"
             },
             {
-                name: "log set channel",
+                name: "log channel",
                 parameters: {
-                    required: ["channel", "type"],
+                    required: ["type", "channel"],
                     optional: []
                 },
                 short_description: "Sets the log channel for a specific type of log",
@@ -325,16 +390,27 @@ export default function Commands() {
                 permission: "MODERATE_MEMBERS"
             },
             {
-                name: "log toggle",
+                name: "log disable",
                 parameters: {
-                    required: ["type", "subtype"],
+                    required: ["type"],
                     optional: []
                 },
-                short_description: "Toggles a specific type of log",
+                short_description: "Disables a specific type of log",
                 long_description:
-                    "This command will toggle a specific type of log. Types can either be server, messages, or members. Subtypes are specific Discord events, such as message delete, message edit, member join, member leave, etc.",
+                    "This command will disable a specific type of log. Types can either be server, messages, or members.",
                 permission: "MODERATE_MEMBERS"
             }
+            // {
+            //     name: "log toggle",
+            //     parameters: {
+            //         required: ["type", "subtype"],
+            //         optional: []
+            //     },
+            //     short_description: "Toggles a specific type of log",
+            //     long_description:
+            //         "This command will toggle a specific type of log. Types can either be server, messages, or members. Subtypes are specific Discord events, such as message delete, message edit, member join, member leave, etc.",
+            //     permission: "MODERATE_MEMBERS"
+            // }
         ],
         utility: [
             {
@@ -346,38 +422,6 @@ export default function Commands() {
                 short_description: "Shows the help menu",
                 long_description:
                     "This command will show the help menu. This is the same menu that you are viewing right now.",
-                permission: "None"
-            },
-            {
-                name: "user",
-                parameters: {
-                    required: [],
-                    optional: ["user"]
-                },
-                short_description: "Shows a user's information",
-                long_description:
-                    "This command will show a user's information. If no user is provided, it will show your information.",
-                permission: "None"
-            },
-            {
-                name: "poll",
-                parameters: {
-                    required: ["options"],
-                    optional: []
-                },
-                short_description: "Creates a poll",
-                long_description:
-                    "This command will create a poll. Options must be separated by ||. For example, `/poll option1 || option2 || option3`, up to 8 options are allowed.",
-                permission: "None"
-            },
-            {
-                name: "qr",
-                parameters: {
-                    required: ["url"],
-                    optional: []
-                },
-                short_description: "Creates a QR code",
-                long_description: "This command will create a QR code. The URL must be a valid URL.",
                 permission: "None"
             },
             {

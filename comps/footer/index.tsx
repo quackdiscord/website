@@ -14,7 +14,7 @@ export default function Footer() {
                         <div className="flex flex-row items-center gap-2 my-2 opacity-40">
                             <a
                                 className="hover:opacity-40 cursor-pointer transition-all ease-in-out duration-150"
-                                href="https://github.com/seedsdiscord"
+                                href="https://github.com/quackdiscord"
                                 target="_blank"
                             >
                                 <FaGithub className="text-xl" />
@@ -39,7 +39,7 @@ export default function Footer() {
                             © 2023
                             <a
                                 className="link link-hover link-primary text-inherit mx-1"
-                                href="https://dickey.gg"
+                                href="https://kyle.so"
                                 target="_blank"
                             >
                                 Object

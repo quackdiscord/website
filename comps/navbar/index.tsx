@@ -5,7 +5,7 @@ import UserMenu from "./userMenu";
 import Link from "next/link";
 
 export default function Navbar(props: any) {
-    const { data: session } = useSession();
+    // const { data: session } = useSession();
 
     return (
         <div className="navbar rounded-lg fixed top-0 backdrop-blur-lg py-5 z-[99] bg-transparent lg:px-10 px-2">
@@ -45,13 +45,9 @@ export default function Navbar(props: any) {
                         </li>
                     </ul>
                 </div>
-                <Link className="btn sm:flex hidden btn-ghost normal-case text-xl font-bold" href="/">
+                <Link className="btn flex btn-ghost normal-case text-xl font-bold" href="/">
                     <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
                     Quack
-                </Link>
-
-                <Link className="btn sm:hidden flex btn-ghost normal-case text-xl font-bold" href="/">
-                    <Image src="/images/webp/logo.webp" alt="Logo" width={32} height={32} className="rounded-full" />
                 </Link>
 
                 <ul className="menu menu-horizontal hidden lg:flex flex-row px-1 text-zinc-300">
@@ -70,9 +66,6 @@ export default function Navbar(props: any) {
                                 <li>
                                     <Link href="/support">Support Server</Link>
                                 </li>
-                                <li>
-                                    <Link href="/blog">Blog</Link>
-                                </li>
                             </ul>
                         </details>
                     </li>
@@ -85,14 +78,7 @@ export default function Navbar(props: any) {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <a
-                    className="btn sm:flex hidden btn-ghost text-yellow-300 bg-yellow-300/20 justify-center items-center hover:bg-yellow-300/10 normal-case"
-                    href="/premium"
-                >
-                    <FaCrown className="text-2xl" />
-                    Premium
-                </a>
-                {session?.user ? (
+                {/* {session?.user ? (
                     <UserMenu user={session?.user as any} />
                 ) : (
                     <button
@@ -102,7 +88,7 @@ export default function Navbar(props: any) {
                         <FaDiscord className="text-2xl" />
                         Login
                     </button>
-                )}
+                )} */}
             </div>
         </div>
     );
