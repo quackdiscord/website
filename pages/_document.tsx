@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                <script defer data-domain="quackbot.xyz" src="https://analytics.kyle.so/js/script.js"></script>
+                <script defer data-domain="quackbot.xyz" src="https://a.kyle.so/js/script.js"></script>
             </Head>
             <body>
                 <Main />
