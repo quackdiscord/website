@@ -224,17 +224,16 @@ export default function Commands() {
                     "This command will remove the latest note that was added to the server. This is useful for quickly removing the latest note if it was added by mistake.",
                 permission: "MODERATE_MEMBERS"
             },
-            // {
-            //     name: "lockdown channel",
-            //     parameters: {
-            //         required: [],
-            //         optional: ["channel"]
-            //     },
-            //     short_description: "Locks down a channel",
-            //     long_description:
-            //         "This command will lock down a channel. If no channel is provided, it will lock down the channel the command was used in.",
-            //     permission: "MODERATE_MEMBERS"
-            // },
+            {
+                name: "lockdown",
+                parameters: {
+                    required: ["channel"],
+                    optional: []
+                },
+                short_description: "Locks down a channel",
+                long_description: "This command will lock down a channel to prevent users from sending messages.",
+                permission: "MODERATE_MEMBERS"
+            },
             // {
             //     name: "lockdown server",
             //     parameters: {
@@ -246,17 +245,16 @@ export default function Commands() {
             //         "This command will lock down the server. This will lock down all channels in the server, and prevent users from sending messages.",
             //     permission: "MODERATE_MEMBERS"
             // },
-            // {
-            //     name: "unlock",
-            //     parameters: {
-            //         required: [],
-            //         optional: ["channel"]
-            //     },
-            //     short_description: "Unlocks a channel",
-            //     long_description:
-            //         "This command will unlock a channel. If no channel is provided, it will unlock the channel the command was used in.",
-            //     permission: "MODERATE_MEMBERS"
-            // },
+            {
+                name: "unlock",
+                parameters: {
+                    required: ["channel"],
+                    optional: []
+                },
+                short_description: "Unlocks a channel",
+                long_description: "This command will unlock a channel.",
+                permission: "MODERATE_MEMBERS"
+            },
             {
                 name: "ticket channel",
                 parameters: {
